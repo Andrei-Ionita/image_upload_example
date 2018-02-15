@@ -20,6 +20,9 @@
                     </p>
                     <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
                         <a class="btn btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit Campground</a>
+                        <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST" style="display: inline;">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
                     <% } %>
                 </div>
             </div>
